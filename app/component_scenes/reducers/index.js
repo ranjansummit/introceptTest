@@ -1,8 +1,8 @@
-
+import {combineReducers} from 'redux';
 import HomeReducer from './HomeReducer';
 
 const appReducer = combineReducers({
-  credit: HomeReducer,
+  home: HomeReducer
 });
 
 function index(state, action) {

@@ -1,7 +1,7 @@
 import {fork} from 'redux-saga/effects';
 import {
- 
-} from './index';
+    watchSavetodatabase
+} from './HomeSaga';
 
 export default function* rootSaga() {
 }

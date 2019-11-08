@@ -1,4 +1,4 @@
-import {HOMEACTIONTYPE} from '../action_types/HomeActionType';
+import {HomeActionType} from '../action_types';
 
 const INITIAL_STATE = {
   loading: false,
@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case HOMEACTIONTYPE.SAVE_TO_DATABASE_RESPONSE:
+    case HomeActionType.SAVE_TO_DATABASE_RESPONSE:
       return {
         ...state,
         loading: false,

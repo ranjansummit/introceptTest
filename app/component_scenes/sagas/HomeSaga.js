@@ -1,4 +1,4 @@
-import {HomeActionType} from '../actionTypes/HomeActionType';
+
 import {HomeService} from '../services/HomeService';
 
 

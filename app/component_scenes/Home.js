@@ -88,4 +88,6 @@ const styles = StyleSheet.create({
 const mapStateToProps = state => {
   return {};
 };
-export default Home;
+export default connect(
+  
+  )(Home);
