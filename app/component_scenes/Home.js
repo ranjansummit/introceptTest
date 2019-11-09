@@ -1,5 +1,4 @@
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   StyleSheet,
   Text,
@@ -10,23 +9,30 @@ import {
   TextInput,
   Image,
   TouchableOpacity,
-  Alert
-}
-  from 'react-native';
+  StatusBar,
+  PixelRatio,
+  Alert,
+} from 'react-native';
 
-  import { Table, TableWrapper, Row, Rows, Col, Cols, Cell } from 'react-native-table-component';
-import { connect } from 'react-redux';
-
+import {
+  Table,
+  TableWrapper,
+  Row,
+  Rows,
+  Col,
+  Cols,
+  Cell,
+} from 'react-native-table-component';
+import {connect} from 'react-redux';
+import CountryPicker from 'react-native-country-picker-modal';
 import Theme from '../uielements/Utility/Colors';
- class Home extends Component {
- 
-
+class Home extends Component {
   constructor(props) {
     super(props);
-    const elementButton = (value) => (
+    const elementButton = value => (
       <TouchableOpacity onPress={() => this._alertIndex(value)}>
         <View style={styles.btn}>
-          <Text style={styles.btnText}>button</Text>
+          <Text style={styles.btnText}>{value}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -34,23 +40,53 @@ import Theme from '../uielements/Utility/Colors';
     this.state = {
       name: '',
       email: '',
-      tableTitle: ['Title', 'Title2', 'Title3', 'Title4','Title', 'Title2', 'Title3', 'Title4','Title', 'Title2', 'Title3', 'Title4','Title', 'Title2', 'Title3', 'Title4','Title', 'Title2', 'Title3', 'Title4','Title', 'Title2', 'Title3', 'Title4'],
-      tableData: [
-        [elementButton('1'), 'a', 'b', 'c', 'd'],
-        [elementButton('2'), '1', '2', '3', '4'],
-        [elementButton('3'), 'a', 'b', 'c', 'd']
+      tableHead: [
+        elementButton('Name'),
+        elementButton('Country'),
+        elementButton('Mobile Number'),
+        elementButton('Mobile Brand'),
       ],
-
+      tableTitle: [
+        'Title',
+        'Title2',
+        'Title3',
+        'Title4',
+        'Title',
+        'Title2',
+        'Title3',
+        'Title4',
+        'Title',
+        'Title2',
+        'Title3',
+        'Title4',
+        'Title',
+        'Title2',
+        'Title3',
+        'Title4',
+        'Title',
+        'Title2',
+        'Title3',
+        'Title4',
+        'Title',
+        'Title2',
+        'Title3',
+        'Title4',
+      ],
+      tableData: [
+        [, 'a', 'b', 'c', 'd'],
+        ['1', '2', '3', '4'],
+        ['a', 'b', 'c', 'd'],
+      ],
+      isCountryclicked: false,
       value: [
-        { key: "1",width:33, title: "name" },
-        { key: "2",width:33, title: "mobileno",sortable: true  },
-        { key: "3",width:33, title: "mobilebrand" ,sortable: true },
-
+        {key: '1', width: 33, title: 'name'},
+        {key: '2', width: 33, title: 'mobileno', sortable: true},
+        {key: '3', width: 33, title: 'mobilebrand', sortable: true},
       ],
       field: [
-        { name:"ranjan",mobileno:"9840051137",mobilebrand:"nokia"},
-        { name:"ranjan",mobileno:"9840051137",mobilebrand:"nokia"},  
-       { name:"ranjan",mobileno:"9840051137",mobilebrand:"nokia"}
+        {name: 'ranjan', mobileno: '9840051137', mobilebrand: 'nokia'},
+        {name: 'ranjan', mobileno: '9840051137', mobilebrand: 'nokia'},
+        {name: 'ranjan', mobileno: '9840051137', mobilebrand: 'nokia'},
       ],
       mobile_number: '',
       password: '',
@@ -62,18 +98,19 @@ import Theme from '../uielements/Utility/Colors';
       error4: false,
       error5: false,
       password_error: '',
+      cca2: 'US',
       confirm_password_error: '',
+      country: '',
     };
   }
   _alertIndex(value) {
     Alert.alert(`This is column ${value}`);
   }
 
-
   render() {
     return (
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-        <ScrollView style ={{marginTop:40}} >
+        <ScrollView style={{marginTop: 30}}>
           {this.props.loading ? <Spinner /> : null}
           {this.props.error ? (
             this.props.error.email ? (
@@ -88,24 +125,18 @@ import Theme from '../uielements/Utility/Colors';
           <View style={styles.container}>
             <View>
               <View>
-
-                <Text
-                  style={styles.bigtext}
-                >
-                  Introcept Survey
-              </Text>
+                <Text style={styles.bigtext}>Introcept Survey</Text>
               </View>
             </View>
             <View>
               <View>
-
                 <TextInput
                   style={styles.inputText}
                   type="string"
                   required
                   placeholder="Full Name"
                   placeholderTextColor={Theme.colors.navyBlue}
-                  onChangeText={name => this.setState({ name, error1: false })}
+                  onChangeText={name => this.setState({name, error1: false})}
                   value={this.state.name}
                 />
               </View>
@@ -114,7 +145,7 @@ import Theme from '../uielements/Utility/Colors';
               </View>
             </View>
             {this.state.error1 ? (
-              <View style={{ justifyContent: 'flex-end', marginRight: 5 }}>
+              <View style={{justifyContent: 'flex-end', marginRight: 5}}>
                 <Text
                   style={{
                     color: 'white',
@@ -129,14 +160,14 @@ import Theme from '../uielements/Utility/Colors';
                     borderTopColor: 'red',
                   }}>
                   Please provide your name
-              </Text>
+                </Text>
               </View>
             ) : null}
 
             <View>
               <View
                 style={{
-                  height: 65,
+                  height: 45,
                   marginTop: 15,
                   marginLeft: 5,
                   marginRight: 5,
@@ -152,22 +183,24 @@ import Theme from '../uielements/Utility/Colors';
 
                     alignItems: 'center',
                   }}>
-                  <Image
-
-                    resizeMode="contain"
+                  <TextInput
+                    autoCapitalize="none"
                     style={{
-                      width: 25,
-                      height: 25,
-                      padding: 5,
-                    }}
-                  />
-                  <Text
-                    style={{
+                      height: 45,
+                      backgroundColor: 'white',
+                      padding: 10,
                       fontSize: 18,
                       color: Theme.colors.navyBlue,
-                    }}>
-                    +977
-                </Text>
+                    }}
+                    type="string"
+                    required
+                    placeholder="Country"
+                    placeholderTextColor={Theme.colors.navyBlue}
+                    onChangeText={mobile_number =>
+                      this.setState({mobile_number, error3: false})
+                    }
+                    value={this.state.mobile_number}
+                  />
                 </View>
                 <View
                   style={{
@@ -178,7 +211,7 @@ import Theme from '../uielements/Utility/Colors';
                   <TextInput
                     autoCapitalize="none"
                     style={{
-                      height: 65,
+                      height: 45,
                       backgroundColor: 'white',
                       padding: 10,
                       fontSize: 18,
@@ -190,7 +223,7 @@ import Theme from '../uielements/Utility/Colors';
                     placeholder="Mobile Number"
                     placeholderTextColor={Theme.colors.navyBlue}
                     onChangeText={mobile_number =>
-                      this.setState({ mobile_number, error3: false })
+                      this.setState({mobile_number, error3: false})
                     }
                     value={this.state.mobile_number}
                   />
@@ -201,7 +234,7 @@ import Theme from '../uielements/Utility/Colors';
               </View>
             </View>
             {this.state.error3 ? (
-              <View style={{ justifyContent: 'flex-end', marginRight: 5 }}>
+              <View style={{justifyContent: 'flex-end', marginRight: 5}}>
                 <Text
                   style={{
                     color: 'white',
@@ -217,7 +250,7 @@ import Theme from '../uielements/Utility/Colors';
                     borderTopColor: 'red',
                   }}>
                   Invalid mobile number.
-              </Text>
+                </Text>
               </View>
             ) : null}
             <View>
@@ -230,7 +263,7 @@ import Theme from '../uielements/Utility/Colors';
                   placeholder="Brand of the Phone"
                   placeholderTextColor={Theme.colors.navyBlue}
                   onChangeText={password =>
-                    this.setState({ password, error4: false })
+                    this.setState({password, error4: false})
                   }
                   value={this.state.password}
                 />
@@ -240,7 +273,7 @@ import Theme from '../uielements/Utility/Colors';
               </View>
             </View>
             {this.state.error4 ? (
-              <View style={{ justifyContent: 'flex-end', marginRight: 5 }}>
+              <View style={{justifyContent: 'flex-end', marginRight: 5}}>
                 <Text
                   style={{
                     color: 'white',
@@ -263,11 +296,7 @@ import Theme from '../uielements/Utility/Colors';
                 flexDirection: 'row',
                 marginTop: 5,
                 marginBottom: 10,
-
-              }}>
-
-
-            </View>
+              }}></View>
             <TouchableOpacity
               style={styles.button}
               onPress={() =>
@@ -282,45 +311,35 @@ import Theme from '../uielements/Utility/Colors';
               }>
               <Text style={styles.text}>Save your Detail</Text>
             </TouchableOpacity>
-            
-      
-    
-            <Table style={{flexDirection: 'row'}} borderStyle={{borderWidth: 1}}>
-          {/* Left Wrapper */}
-          <TableWrapper style={{width: 80}}>
-            <Cell data="" style={styles.singleHead}/>
-            <TableWrapper style={{flexDirection: 'row'}}>
-              <Col data={['H1', 'H2']} style={styles.head} heightArr={[60, 60]} textStyle={styles.text} />
-              <Col data={this.state.tableTitle} style={styles.title} heightArr={[30, 30, 30, 30]} textStyle={styles.titleText}></Col>
-            </TableWrapper>
-          </TableWrapper>
+            <Text style={styles.bigtextdata}> Survey Data</Text>
 
-          {/* Right Wrapper */}
-          <TableWrapper style={{flex:1}}>
-            <Cols data={this.state.tableData} heightArr={[40, 30, 30, 30, 30]} textStyle={styles.text}/>
-          </TableWrapper>
-        </Table>
+            <Table borderStyle={{borderWidth: 4, borderColor: '#c8e1ff'}}>
+              <Row
+                data={this.state.tableHead}
+                style={styles.head}
+                textStyle={styles.tabletext}
+              />
+              <Rows data={this.state.tableData} textStyle={styles.tabletext} />
+            </Table>
 
           </View>
- 
         </ScrollView>
       </TouchableWithoutFeedback>
     );
-
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     margin: 5,
-    padding: 10,
+    padding: 5,
     flex: 1,
     justifyContent: 'space-evenly',
     backgroundColor: Theme.colors.lightBlue,
   },
   inputText: {
     padding: 10,
-    height: 65,
+    height: 45,
     flex: 10,
     fontSize: 18,
     color: Theme.colors.navyBlue,
@@ -328,14 +347,13 @@ const styles = StyleSheet.create({
     marginTop: 25,
     marginLeft: 5,
     marginRight: 5,
-
   },
   button: {
     justifyContent: 'center',
     backgroundColor: Theme.colors.red,
     padding: 10,
     margin: 10,
-    height: 65,
+    height: 45,
   },
   text: {
     fontSize: 18,
@@ -356,21 +374,40 @@ const styles = StyleSheet.create({
     marginTop: 35,
     textAlign: 'center',
   },
+  bigtextdata: {
+    fontSize: 25,
+    color: Theme.colors.navyBlue,
+    marginTop: 15,
+    marginBottom: 10,
 
-  tablecontainer: { flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff' },
-  singleHead: { width: 80, height: 40, backgroundColor: '#c8e1ff' },
-  head: { flex: 1, backgroundColor: '#c8e1ff' },
-  title: { flex: 2, backgroundColor: '#f6f8fa' },
-  titleText: { marginRight: 6, textAlign:'right' },
-  tabletext: { textAlign: 'center' },
-  tablebtn: { width: 58, height: 18, marginLeft: 15, backgroundColor: '#c8e1ff', borderRadius: 2 },
-  tablebtnText: { textAlign: 'center' }
-
+    textAlign: 'center',
+  },
+  tablecontainer: {
+    flex: 1,
+    padding: 16,
+    paddingTop: 30,
+    backgroundColor: '#fff',
+  },
+  singleHead: {width: 80, height: 40, backgroundColor: '#c8e1ff'},
+  head: {flex: 1, backgroundColor: '#c8e1ff'},
+  title: {flex: 2, backgroundColor: '#f6f8fa'},
+  titleText: {marginRight: 6, textAlign: 'right'},
+  tabletext: {
+    textAlign: 'left',
+    color: Theme.colors.navyBlue,
+    paddingHorizontal: 4,
+  },
+  tablebtn: {
+    width: 58,
+    height: 18,
+    marginLeft: 15,
+    backgroundColor: '#c8e1ff',
+    borderRadius: 2,
+  },
+  tablebtnText: {textAlign: 'center'},
 });
 
 const mapStateToProps = state => {
   return {};
 };
-export default connect(
-
-)(Home);
+export default connect()(Home);

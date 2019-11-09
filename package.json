@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.4",
+    "react-native-country-picker-modal": "^1.8.1",
     "react-native-generic-table-page": "^0.4.1",
     "react-native-router-flux": "^4.0.6",
     "react-native-table-component": "^1.2.1",
