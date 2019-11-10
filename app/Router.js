@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Router, Scene} from 'react-native-router-flux';
 import {Actions} from 'react-native-router-flux';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
-import Home from './component_scenes/Home';
+import Home from './component_scenes/pages/Home';
 import Theme from './uielements/Utility/Colors'
 
 
