@@ -53,6 +53,22 @@
 		2D02E47B1E0B4A5D006451C7 /* IntroceptorTest-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IntroceptorTest-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* IntroceptorTest-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IntroceptorTest-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38935709C5E74BF87AC7AFD9 /* Pods-IntroceptorTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroceptorTest.release.xcconfig"; path = "Target Support Files/Pods-IntroceptorTest/Pods-IntroceptorTest.release.xcconfig"; sourceTree = "<group>"; };
+		3E09FF2F2378C7C5009FC361 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
+		3E09FF302378C7C5009FC361 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		3E09FF312378C7C5009FC361 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		3E09FF322378C7C5009FC361 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		3E09FF332378C7C5009FC361 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Brands.ttf; sourceTree = "<group>"; };
+		3E09FF342378C7C5009FC361 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		3E09FF352378C7C5009FC361 /* AntDesign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AntDesign.ttf; sourceTree = "<group>"; };
+		3E09FF362378C7C5009FC361 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		3E09FF372378C7C5009FC361 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		3E09FF382378C7C5009FC361 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Solid.ttf; sourceTree = "<group>"; };
+		3E09FF392378C7C5009FC361 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome5_Regular.ttf; sourceTree = "<group>"; };
+		3E09FF3A2378C7C5009FC361 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		3E09FF3B2378C7C5009FC361 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		3E09FF3C2378C7C5009FC361 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		3E09FF3D2378C7C5009FC361 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		3E09FF3E2378C7C5009FC361 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
 		47083F5E906F6211F5AF4AA4 /* libPods-IntroceptorTest-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IntroceptorTest-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5523F1A7EBF77FF981D128DE /* Pods-IntroceptorTest-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroceptorTest-tvOS.release.xcconfig"; path = "Target Support Files/Pods-IntroceptorTest-tvOS/Pods-IntroceptorTest-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		5C06C5519BD446C0234685A9 /* Pods-IntroceptorTest-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroceptorTest-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-IntroceptorTest-tvOSTests/Pods-IntroceptorTest-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,8 +176,39 @@
 				D6368CB6DE63F43EEA9C2DE2 /* Pods-IntroceptorTestTests.debug.xcconfig */,
 				B3F69FB17CC9C4A4DEDF5CCD /* Pods-IntroceptorTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3E09FF2E2378C7C5009FC361 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3E09FF2F2378C7C5009FC361 /* Fontisto.ttf */,
+				3E09FF302378C7C5009FC361 /* Octicons.ttf */,
+				3E09FF312378C7C5009FC361 /* Feather.ttf */,
+				3E09FF322378C7C5009FC361 /* Entypo.ttf */,
+				3E09FF332378C7C5009FC361 /* FontAwesome5_Brands.ttf */,
+				3E09FF342378C7C5009FC361 /* MaterialCommunityIcons.ttf */,
+				3E09FF352378C7C5009FC361 /* AntDesign.ttf */,
+				3E09FF362378C7C5009FC361 /* Foundation.ttf */,
+				3E09FF372378C7C5009FC361 /* Ionicons.ttf */,
+				3E09FF382378C7C5009FC361 /* FontAwesome5_Solid.ttf */,
+				3E09FF392378C7C5009FC361 /* FontAwesome5_Regular.ttf */,
+				3E09FF3A2378C7C5009FC361 /* FontAwesome.ttf */,
+				3E09FF3B2378C7C5009FC361 /* Zocial.ttf */,
+				3E09FF3C2378C7C5009FC361 /* EvilIcons.ttf */,
+				3E09FF3D2378C7C5009FC361 /* SimpleLineIcons.ttf */,
+				3E09FF3E2378C7C5009FC361 /* MaterialIcons.ttf */,
+			);
+			name = Fonts;
+			path = "../node_modules/react-native-vector-icons/Fonts";
+			sourceTree = "<group>";
+		};
+		66D61139B4BF4FDC813C963C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E09FF2E2378C7C5009FC361 /* Fonts */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -197,14 +244,6 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
-		};
-		66D61139B4BF4FDC813C963C /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -317,12 +356,15 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* IntroceptorTest */,
@@ -332,6 +374,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3E09FF2C2378C67E009FC361 /* libRNVectorIcons-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRNVectorIcons-tvOS.a";
+			remoteRef = 3E09FF2B2378C67E009FC361 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -655,6 +707,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntroceptorTest.app/IntroceptorTest";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -675,6 +730,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntroceptorTest.app/IntroceptorTest";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -695,6 +753,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = IntroceptorTest;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -714,6 +775,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = IntroceptorTest;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -742,6 +806,9 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -770,6 +837,9 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
@@ -797,6 +867,9 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntroceptorTest-tvOS.app/IntroceptorTest-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
@@ -824,6 +897,9 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IntroceptorTest-tvOS.app/IntroceptorTest-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};

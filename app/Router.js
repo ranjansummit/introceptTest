@@ -19,10 +19,6 @@ class RouterComponent extends Component {
     );
   }
 }
-// const styles = StyleSheet.create({
-//   navigationBarStyle: {
-//     backgroundColor: Theme.colors.navyBlue,
-//   },
-// });
+
 export default RouterComponent;
 

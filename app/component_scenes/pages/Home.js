@@ -8,7 +8,7 @@ import {
   Keyboard,
   TextInput,
   TouchableOpacity,
-  Dimensions
+  Alert
 }
   from 'react-native';
 
@@ -19,12 +19,11 @@ import {
 }
   from 'react-native-table-component';
 import { connect } from 'react-redux';
-import ErrorIcon from '../../uielements/customview/ErrorIcon';
 import CountryPicker from 'react-native-country-picker-modal';
 import Theme from '../../uielements/Utility/Colors';
 console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
 
-let screenWidth = Dimensions.get('window').width;
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -67,18 +66,10 @@ class Home extends Component {
 
   _onSaveEntryClicked = (name, number, brand) => {
 
-    if (name.length === 0) {
-      this.setState({ error1: true });
+    if (name.length === 0 || brand.length === 0|| number.length === 0)  {
+      Alert.alert("Please enter all values properly");
     }
-    else if (number.length === 0) {
-      this.setState({ error2: true });
-    }
-    else if (brand.length === 0) {
-      this.setState({ error3: true });
-    }
-
     else {
-
       this._SaveData()
     }
   }
@@ -129,29 +120,8 @@ class Home extends Component {
                   value={this.state.name}
                 />
               </View>
-              <View style={styles.error}>
-                {this.state.nameError ? <ErrorIcon /> : null}
-              </View>
+         
             </View>
-            {this.state.nameError ? (
-              <View style={{ justifyContent: 'flex-end', marginRight: 5 }}>
-                <Text
-                  style={{
-                    color: 'white',
-                    fontSize: 0.04 * screenWidth,
-                    textAlign: 'center',
-                    padding: 2,
-                    marginTop: 2,
-                    marginBottom: 2,
-                    marginLeft: '30%',
-                    backgroundColor: 'black',
-                    borderTopWidth: 5,
-                    borderTopColor: 'red',
-                  }}>
-                  Please provide your name
-                </Text>
-              </View>
-            ) : null}
 
             <View>
               <View
@@ -221,30 +191,9 @@ class Home extends Component {
                   />
                 </View>
               </View>
-              <View style={styles.error}>
-                {this.state.brandError ? <ErrorIcon /> : null}
               </View>
-            </View>
-            {this.state.brandError ? (
-              <View style={{ justifyContent: 'flex-end', marginRight: 5 }}>
-                <Text
-                  style={{
-                    color: 'white',
-                    fontSize: 0.04 * screenWidth,
-                    textAlign: 'center',
-                    padding: 2,
-                    marginBottom: 2,
-                    marginTop: 2,
-
-                    marginLeft: '30%',
-                    backgroundColor: 'black',
-                    borderTopWidth: 4,
-                    borderTopColor: 'red',
-                  }}>
-                  Invalid mobile number.
-                </Text>
-              </View>
-            ) : null}
+          
+           
             <View>
               <View>
                 <TextInput
@@ -260,29 +209,7 @@ class Home extends Component {
                   value={this.state.brand}
                 />
               </View>
-              <View style={styles.error}>
-                {this.state.error4 ? <ErrorIcon /> : null}
               </View>
-            </View>
-            {this.state.error4 ? (
-              <View style={{ justifyContent: 'flex-end', marginRight: 5 }}>
-                <Text
-                  style={{
-                    color: 'white',
-                    fontSize: 0.04 * screenWidth,
-                    textAlign: 'center',
-                    padding: 2,
-                    marginTop: 2,
-                    marginBottom: 2,
-                    marginLeft: '30%',
-                    backgroundColor: 'black',
-                    borderTopWidth: 4,
-                    borderTopColor: 'red',
-                  }}>
-                  {this.state.password_error}
-                </Text>
-              </View>
-            ) : null}
             <View
               style={{
                 flexDirection: 'row',
