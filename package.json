@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "cross-fetch": "^3.0.4",
     "react": "16.9.0",
     "react-native": "0.61.4",
     "react-native-country-picker-modal": "^1.8.1",
@@ -30,7 +31,8 @@
     "eslint": "6.6.0",
     "jest": "24.9.0",
     "metro-react-native-babel-preset": "0.56.3",
-    "react-test-renderer": "16.9.0"
+    "react-test-renderer": "16.9.0",
+    "redux-mock-store": "^1.5.3"
   },
   "jest": {
     "preset": "react-native"

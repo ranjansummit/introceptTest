@@ -21,10 +21,10 @@ import {
 import { connect } from 'react-redux';
 import CountryPicker from 'react-native-country-picker-modal';
 import Theme from '../../uielements/Utility/Colors';
-console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
+console.disableYellowBox = true;
 
 
-class Home extends Component {
+ class Home extends Component {
   constructor(props) {
     super(props);
     const elementButton = (value,title) => (
