@@ -19,4 +19,5 @@ In this app user can save their name , country , mobile number and their mobile 
 
 ###CI
 
--  Werker.com is used for continuous integration.
+-  Wercker.com is used for continuous integration.
+the app is under https://app.wercker.com/Ranjan/introceptTest

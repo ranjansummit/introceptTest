@@ -63,7 +63,7 @@ console.disableYellowBox = true;
 
     };
   }
-
+   
   _onSaveEntryClicked = (name, number, brand) => {
 
     if (name.length === 0 || brand.length === 0|| number.length === 0)  {
@@ -88,15 +88,6 @@ console.disableYellowBox = true;
     data.sort((a, b) => a[value].localeCompare(b[value]));
     this.setState({ tableData: data })
   }
-  _pickerOnselect= country => {
-    this.setState({
-      countryCode: country.cca2,
-      callingCode: `+ ${country.callingCode}`,
-      country: country.name
-    });
-  }
-  
-
   render() {
     return (
       <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
@@ -116,7 +107,7 @@ console.disableYellowBox = true;
                   required
                   placeholder="Full Name"
                   placeholderTextColor={Theme.colors.navyBlue}
-                  onChangeText={name => this.setState({ name, error1: false })}
+                  onChangeText={name => this.setState({ name, nameError: false })}
                   value={this.state.name}
                 />
               </View>
@@ -185,7 +176,7 @@ console.disableYellowBox = true;
                     placeholder="Mobile Number"
                     placeholderTextColor={Theme.colors.navyBlue}
                     onChangeText={mobile_number =>
-                      this.setState({ mobile_number, error3: false })
+                      this.setState({ mobile_number, mobileError: false })
                     }
                     value={this.state.mobile_number}
                   />
@@ -203,8 +194,8 @@ console.disableYellowBox = true;
                   required
                   placeholder="Brand of the Phone"
                   placeholderTextColor={Theme.colors.navyBlue}
-                  onChangeText={brand =>
-                    this.setState({ brand, error4: false })
+                    onChangeText={brand =>
+                    this.setState({ brand, brandError: false })
                   }
                   value={this.state.brand}
                 />
@@ -218,7 +209,8 @@ console.disableYellowBox = true;
               }}></View>
             <TouchableOpacity
               style={styles.button}
-              onPress={() =>
+            testID={'save'}
+                onPress={() =>
                 this._onSaveEntryClicked(
                   this.state.name,
                   this.state.mobile_number,

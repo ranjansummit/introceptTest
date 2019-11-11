@@ -1,0 +1,630 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`My Connected React-Redux Component redered sucesfully 1`] = `
+<RCTScrollView
+  accessible={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "marginTop": 30,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#E1E5F2",
+          "flex": 1,
+          "justifyContent": "space-evenly",
+          "margin": 5,
+          "padding": 5,
+        }
+      }
+    >
+      <View>
+        <View>
+          <Text
+            style={
+              Object {
+                "color": "#012D6C",
+                "fontSize": 25,
+                "marginTop": 35,
+                "textAlign": "center",
+              }
+            }
+          >
+            Introcept Survey
+          </Text>
+        </View>
+      </View>
+      <View>
+        <View>
+          <TextInput
+            allowFontScaling={true}
+            onChangeText={[Function]}
+            placeholder="Full Name"
+            placeholderTextColor="#012D6C"
+            rejectResponderTermination={true}
+            required={true}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "color": "#012D6C",
+                "flex": 10,
+                "fontSize": 18,
+                "height": 45,
+                "marginLeft": 5,
+                "marginRight": 5,
+                "marginTop": 25,
+                "padding": 10,
+              }
+            }
+            type="string"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
+      </View>
+      <View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "height": 45,
+              "marginLeft": 5,
+              "marginRight": 5,
+              "marginTop": 15,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "white",
+                "flex": 0.4,
+                "flexDirection": "row",
+                "marginRight": 3,
+                "padding": 10,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              isTVSelectable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "flex-start",
+                      "justifyContent": "flex-start",
+                    },
+                    Object {
+                      "marginTop": 5,
+                    },
+                    undefined,
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                      "marginRight": 10,
+                      "width": 30,
+                    }
+                  }
+                >
+                  <ActivityIndicator
+                    animating={true}
+                    color="#999999"
+                    hidesWhenStopped={true}
+                    size="small"
+                  />
+                </View>
+              </View>
+            </View>
+            <Modal
+              animated={true}
+              animationType="slide"
+              hardwareAccelerated={false}
+              onRequestClose={[Function]}
+              visible={false}
+            >
+              <RCTSafeAreaView
+                emulateUnlessSupported={true}
+                style={
+                  Array [
+                    Object {
+                      "flex": 1,
+                    },
+                    Object {
+                      "backgroundColor": "#ffffff",
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                    }
+                  }
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    autoCorrect={false}
+                    autoFocus={false}
+                    onBlur={[Function]}
+                    onChangeText={[Function]}
+                    onClose={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Enter country name"
+                    placeholderTextColor="#aaa"
+                    rejectResponderTermination={true}
+                    renderFilter={[Function]}
+                    style={
+                      Array [
+                        Object {
+                          "height": 48,
+                          "width": "70%",
+                        },
+                        Object {
+                          "color": "#000000",
+                          "fontFamily": "System",
+                          "fontSize": 16,
+                        },
+                      ]
+                    }
+                    testID="text-input-country-filter"
+                    underlineColorAndroid="transparent"
+                    value=""
+                    withCloseButton={false}
+                    withFilter={true}
+                  />
+                </View>
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "justifyContent": "space-between",
+                      },
+                      Object {
+                        "backgroundColor": "#ffffff",
+                      },
+                    ]
+                  }
+                >
+                  <RCTScrollView
+                    ItemSeparatorComponent={[Function]}
+                    automaticallyAdjustContentInsets={false}
+                    data={Array []}
+                    disableVirtualization={false}
+                    getItem={[Function]}
+                    getItemCount={[Function]}
+                    getItemLayout={[Function]}
+                    horizontal={false}
+                    initialNumToRender={14}
+                    keyExtractor={[Function]}
+                    keyboardShouldPersistTaps="handled"
+                    maxToRenderPerBatch={10}
+                    numColumns={1}
+                    onContentSizeChange={[Function]}
+                    onEndReachedThreshold={2}
+                    onLayout={[Function]}
+                    onMomentumScrollEnd={[Function]}
+                    onScroll={[Function]}
+                    onScrollBeginDrag={[Function]}
+                    onScrollEndDrag={[Function]}
+                    onScrollToIndexFailed={[Function]}
+                    removeClippedSubviews={false}
+                    renderItem={[Function]}
+                    scrollEventThrottle={1}
+                    stickyHeaderIndices={Array []}
+                    testID="list-countries"
+                    updateCellsBatchingPeriod={50}
+                    viewabilityConfigCallbackPairs={Array []}
+                    windowSize={21}
+                  >
+                    <View />
+                  </RCTScrollView>
+                </View>
+              </RCTSafeAreaView>
+            </Modal>
+            <Text
+              style={
+                Object {
+                  "color": "#012D6C",
+                  "fontSize": 18,
+                  "paddingTop": 5,
+                }
+              }
+            >
+              Nepal
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "backgroundColor": "red",
+                "flex": 0.6,
+                "justifyContent": "flex-start",
+              }
+            }
+          >
+            <TextInput
+              allowFontScaling={true}
+              autoCapitalize="none"
+              keyboardType="numeric"
+              onChangeText={[Function]}
+              placeholder="Mobile Number"
+              placeholderTextColor="#012D6C"
+              rejectResponderTermination={true}
+              required={true}
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "color": "#012D6C",
+                  "fontSize": 18,
+                  "height": 45,
+                  "padding": 10,
+                }
+              }
+              type="string"
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+        </View>
+      </View>
+      <View>
+        <View>
+          <TextInput
+            allowFontScaling={true}
+            autoCapitalize="none"
+            onChangeText={[Function]}
+            placeholder="Brand of the Phone"
+            placeholderTextColor="#012D6C"
+            rejectResponderTermination={true}
+            required={true}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "color": "#012D6C",
+                "flex": 10,
+                "fontSize": 18,
+                "height": 45,
+                "marginLeft": 5,
+                "marginRight": 5,
+                "marginTop": 25,
+                "padding": 10,
+              }
+            }
+            type="string"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flexDirection": "row",
+            "marginBottom": 10,
+            "marginTop": 5,
+          }
+        }
+      />
+      <View
+        accessible={true}
+        focusable={true}
+        isTVSelectable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "backgroundColor": "#FF0000",
+            "height": 45,
+            "justifyContent": "center",
+            "margin": 10,
+            "opacity": 1,
+            "padding": 10,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontSize": 18,
+              "textAlign": "center",
+            }
+          }
+        >
+          Save your Detail
+        </Text>
+      </View>
+      <Text
+        style={
+          Object {
+            "color": "#012D6C",
+            "fontSize": 25,
+            "marginBottom": 10,
+            "marginTop": 15,
+            "textAlign": "center",
+          }
+        }
+      >
+         Survey Data
+      </Text>
+      <View
+        style={
+          Array [
+            undefined,
+            Object {
+              "borderBottomWidth": 4,
+              "borderColor": "#c8e1ff",
+              "borderLeftWidth": 4,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              undefined,
+              0,
+              Object {
+                "flexDirection": "row",
+                "overflow": "hidden",
+              },
+              Object {
+                "backgroundColor": "#c8e1ff",
+                "flex": 1,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#c8e1ff",
+                  "borderRightWidth": 4,
+                  "borderTopWidth": 4,
+                },
+                Object {
+                  "justifyContent": "center",
+                },
+                undefined,
+                undefined,
+                undefined,
+                Object {
+                  "flex": 1,
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text>
+                Name
+                 
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#c8e1ff",
+                  "borderRightWidth": 4,
+                  "borderTopWidth": 4,
+                },
+                Object {
+                  "justifyContent": "center",
+                },
+                undefined,
+                undefined,
+                undefined,
+                Object {
+                  "flex": 1,
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text>
+                Country
+                 
+              </Text>
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "red",
+                    }
+                  }
+                >
+                  sort
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#c8e1ff",
+                  "borderRightWidth": 4,
+                  "borderTopWidth": 4,
+                },
+                Object {
+                  "justifyContent": "center",
+                },
+                undefined,
+                undefined,
+                undefined,
+                Object {
+                  "flex": 1,
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text>
+                Mobile No.
+                 
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "borderColor": "#c8e1ff",
+                  "borderRightWidth": 4,
+                  "borderTopWidth": 4,
+                },
+                Object {
+                  "justifyContent": "center",
+                },
+                undefined,
+                undefined,
+                undefined,
+                Object {
+                  "flex": 1,
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <Text>
+                Brand
+                 
+              </Text>
+              <View
+                accessible={true}
+                focusable={true}
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "red",
+                    }
+                  }
+                >
+                  sort
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          style={
+            Array [
+              0,
+              0,
+            ]
+          }
+        />
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;
