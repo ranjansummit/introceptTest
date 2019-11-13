@@ -1,5 +1,5 @@
 ## IntroceptTest
-#Purpose
+##Purpose
  This app is made for test conducted by Introcept.
 
 # Function
@@ -12,12 +12,12 @@ In this app user can save their name , country , mobile number and their mobile 
 - React-native-country-picker-modal for country picker
 - Router-flux is used for navigation
 
-###Test
+##Test
 
 - Jest is used for testing
 
 
-###CI
+##CI
 
 -  Wercker.com is used for continuous integration.
 the app is under https://app.wercker.com/Ranjan/introceptTest
